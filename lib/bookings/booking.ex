@@ -1,6 +1,4 @@
 defmodule Flightex.Bookings.Booking do
-  alias Flightex.Users.User
-
   @keys [:complete_date, :local_origin, :local_destination, :user_id, :id]
 
   @enforce_keys @keys
@@ -17,7 +15,4 @@ defmodule Flightex.Bookings.Booking do
        id: UUID.uuid4()
      }}
   end
-
-  def build(_complete_date, _local_origin, _local_destination, _user_id),
-    do: {:error, "Invalid parameters."}
 end
